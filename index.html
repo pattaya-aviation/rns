@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pattaya Aviation - Read & Sign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-area">
+          <img class="logo-img" src="Pattaya Aviation.png" alt="Pattaya Aviation Logo">
+        </div>
+      </div>
+    </header>
+
+    <!-- Form Card -->
+    <main class="form-card">
+      <form id="readSignForm" novalidate>
+        <!-- Section: Personal Info -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-icon">👤</span>
+            <h2>ข้อมูลพนักงาน</h2>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">ชื่อ <span class="required">*</span></label>
+              <input type="text" id="firstName" name="first_name" placeholder="ชื่อภาษาไทย" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">นามสกุล <span class="required">*</span></label>
+              <input type="text" id="lastName" name="last_name" placeholder="นามสกุลภาษาไทย" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="staffId">รหัสพนักงาน <span class="hint">(5 หลัก)</span> <span class="required">*</span></label>
+              <input type="text" id="staffId" name="staff_id" inputmode="numeric" pattern="[0-9]{1,5}" maxlength="5" placeholder="เช่น 01234" required>
+            </div>
+            <div class="form-group">
+              <label for="position">ตำแหน่ง <span class="required">*</span></label>
+              <input type="text" id="position" name="position" placeholder="เช่น พนักงานต้อนรับ" required>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Department Info -->
+        <section class="form-section">
+          <div class="section-header">
+            <span class="section-icon">🏢</span>
+            <h2>สังกัด</h2>
+          </div>
+
+          <div class="form-group">
+            <label for="division">ฝ่าย <span class="required">*</span></label>
+            <div class="select-wrapper">
+              <select id="division" name="division" required>
+                <option value="" disabled selected>เลือกฝ่าย</option>
+                <optgroup label="── สำนักงานใหญ่ (HDQ) ──">
+                  <option>ฝ่ายสำนักเลขานุการ (BE)</option>
+                  <option>ฝ่ายบัญชีและการเงิน (BF)</option>
+                  <option>ฝ่ายทรัพยากรบุคคล (BH)</option>
+                  <option>ฝ่ายเทคโนโลยีสารสนเทศ (BI)</option>
+                  <option>ฝ่ายจัดซื้อ (BD)</option>
+                  <option>ฝ่ายมาตรฐาน (BS)</option>
+                  <option>ฝ่ายพัฒนาธุรกิจและลูกค้าสัมพันธ์ (BR)</option>
+                </optgroup>
+                <optgroup label="── สถานี (BKK/Outstation) ──">
+                  <option>ฝ่ายปฏิบัติการภาคพื้น (BG)</option>
+                </optgroup>
+              </select>
+              <span class="select-arrow">▼</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="department">แผนก <span class="required">*</span></label>
+            <div class="select-wrapper">
+              <select id="department" name="department" required>
+                <option value="" disabled selected>เลือกแผนก</option>
+                <optgroup label="── สำนักงานใหญ่ (HDQ) ──">
+                  <option>แผนกธุรการ (EA)</option>
+                  <option>แผนกเลขานุการผู้บริหาร (EA)</option>
+                  <option>แผนกบัญชีและการเงิน (FA)</option>
+                  <option>แผนกสนับสนุนปฏิบัติการภาคพื้น (BG-1)</option>
+                  <option>แผนกทรัพยากรบุคคลส่วนกลาง (HC)</option>
+                  <option>แผนกบริหารทรัพยากรบุคคล (HM)</option>
+                  <option>แผนกสนับสนุนปฏิบัติการทรัพยากรบุคคล (HO)</option>
+                  <option>แผนกสวัสดิการและสิทธิประโยชน์พนักงาน (HW)</option>
+                  <option>แผนกวางแผนกลยุทธ์และพัฒนาทรัพยากรบุคคล (HD)</option>
+                  <option>แผนกเทคโนโลยีสารสนเทศ (IM)</option>
+                  <option>แผนกกฎหมาย (LM)</option>
+                  <option>แผนกจัดซื้อ (DP)</option>
+                  <option>แผนกมาตรฐาน (ST)</option>
+                  <option>แผนกสื่อสารองค์กร (RC)</option>
+                  <option>แผนกพัฒนาธุรกิจ (RB)</option>
+                </optgroup>
+                <optgroup label="── สถานี (BKK/Outstation) ──">
+                  <option>แผนกบริการผู้โดยสารภาคพื้น (GA)</option>
+                  <option>แผนกควบคุมระวางบรรทุก (GB)</option>
+                  <option>แผนกห้องรับรองพิเศษผู้โดยสาร (GC)</option>
+                  <option>แผนกบริการลานจอด (GD)</option>
+                  <option>แผนกบริการสถานี (GF)</option>
+                </optgroup>
+              </select>
+              <span class="select-arrow">▼</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="section">ส่วนงาน <span class="required">*</span></label>
+            <div class="select-wrapper">
+              <select id="section" name="section" required>
+                <option value="" disabled selected>เลือกส่วนงาน</option>
+                <option>-</option>
+                <optgroup label="── สำนักงานใหญ่ (HDQ) ──">
+                  <option>ส่วนงานธุรการสำนักงาน (EA-A)</option>
+                  <option>ส่วนงานบัญชีลูกหนี้ (FA-R)</option>
+                  <option>ส่วนงานบัญชีเจ้าหนี้ (FA-P)</option>
+                  <option>ส่วนงานสนับสนุนปฏิบัติการภาคพื้น ทีม 1</option>
+                  <option>ส่วนงานสนับสนุนปฏิบัติการภาคพื้น ทีม 2</option>
+                  <option>ส่วนงานสนับสนุนปฏิบัติการภาคพื้น ทีม 3</option>
+                  <option>ส่วนงานสนับสนุนปฏิบัติการภาคพื้น ทีม 4</option>
+                  <option>ส่วนงานสนับสนุนปฏิบัติการภาคพื้น ทีม 5</option>
+                  <option>ส่วนงานสนับสนุนปฏิบัติการภาคพื้น ทีม 6</option>
+                  <option>ส่วนงานเงินเดือนและค่าตอบแทน (HM-S)</option>
+                  <option>ส่วนงานแรงงานสัมพันธ์ (HM-E)</option>
+                  <option>ส่วนงานสารสนเทศทรัพยากรบุคคล (HM-I)</option>
+                  <option>ส่วนงานสรรหาและว่าจ้าง (HO-R)</option>
+                  <option>ส่วนงานประสานงานด้านการศึกษา (HO-E)</option>
+                  <option>ส่วนงานสนับสนุนและประสานงานสถานีกรุงเทพ (HO-B)</option>
+                  <option>ส่วนงานสวัสดิการทั่วไป (HW-G)</option>
+                  <option>ส่วนงานเครื่องแบบพนักงาน (HW-U)</option>
+                  <option>ส่วนงานบริการพนักงาน (HW-E)</option>
+                  <option>ส่วนงานวางแผนกลยุทธ์ทรัพยากรบุคคล (HD-S)</option>
+                  <option>ส่วนงานพัฒนาองค์กร (HD-D)</option>
+                  <option>ส่วนงานมาตรฐานการรักษาความปลอดภัยการบิน (ST-C)</option>
+                  <option>ส่วนงานควบคุมเอกสารและงานธุรการ (ST-D)</option>
+                  <option>ส่วนงานนิรภัยการบิน (ST-F)</option>
+                  <option>ส่วนงานอาชีวอนามัยและความปลอดภัย (ST-H)</option>
+                  <option>ส่วนงานประกันคุณภาพ (ST-Q)</option>
+                </optgroup>
+                <optgroup label="── สถานี (BKK/Outstation) ──">
+                  <option>ส่วนงานบริการผู้โดยสาร (GA-A) แผนกบริการผู้โดยสารภาคพื้น (GA)</option>
+                  <option>ส่วนงานบริการรถเข็นผู้โดยสาร (GA-B) แผนกบริการผู้โดยสารภาคพื้น (GA)</option>
+                  <option>ส่วนงานควบคุมระวางบรรทุก (GB-A) แผนกควบคุมระวางบรรทุก (GB)</option>
+                  <option>ส่วนงานประสานงานและควบคุมการให้บริการภาคพื้น (GB-B) แผนกควบคุมระวางบรรทุก (GB)</option>
+                  <option>ส่วนงานห้องรับรองพิเศษ Royal Orchid Prestige Lounge (GC-A) แผนกห้องรับรองพิเศษผู้โดยสาร (GC)</option>
+                  <option>ส่วนงานห้องรับรองพิเศษ SilverKris Lounge (GC-B) แผนกห้องรับรองพิเศษผู้โดยสาร (GC)</option>
+                  <option>ส่วนงานห้องรับรองพิเศษ Qatar Airways Premium Lounge (GC-C) แผนกห้องรับรองพิเศษผู้โดยสาร (GC)</option>
+                  <option>ส่วนงานบริการทำความสะอาดภายในเครื่องบิน (GD-D) แผนกบริการลานจอด (GD)</option>
+                  <option>หน่วยงานบริการผู้โดยสารสถานี (GF-A) แผนกบริการสถานี (GF)</option>
+                  <option>หน่วยงานบริการลานจอดสถานี (GF-B) แผนกบริการสถานี (GF)</option>
+                  <option>หน่วยงานซ่อมบำรุงอุปกรณ์บริการภาคพื้นสถานี (GF-C) แผนกบริการสถานี (GF)</option>
+                  <option>หน่วยงานควบคุมระวางบรรทุกสถานี (GF-D) แผนกบริการสถานี (GF)</option>
+                  <option>หน่วยงานบริการทำความสะอาดเครื่องบินสถานี (GF-E) แผนกบริการสถานี (GF)</option>
+                  <option>หน่วยงานห้องรับรองพิเศษ VIP (GF-F) แผนกบริการสถานี (GF)</option>
+                </optgroup>
+              </select>
+              <span class="select-arrow">▼</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location">สถานี <span class="required">*</span></label>
+            <div class="select-wrapper">
+              <select id="location" name="location" required>
+                <option value="" disabled selected>เลือกสถานี</option>
+                <optgroup label="── สำนักงานใหญ่ ──">
+                  <option value="สำนักงานใหญ่ (HDQ)">สำนักงานใหญ่ (HDQ)</option>
+                </optgroup>
+                <optgroup label="── สถานีสุวรรณภูมิ ──">
+                  <option value="สถานีสุวรรณภูมิ (BKK)">สถานีสุวรรณภูมิ (BKK)</option>
+                  <option value="สถานีสุวรรณภูมิ (BKK-VZ)">สถานีสุวรรณภูมิ (BKK-VZ)</option>
+                  <option value="สถานีสุวรรณภูมิ (BKK-PA)">สถานีสุวรรณภูมิ (BKK-PA)</option>
+                </optgroup>
+                <optgroup label="── สถานีต่างจังหวัด ──">
+                  <option value="สถานีเชียงราย (CEI)">สถานีเชียงราย (CEI)</option>
+                  <option value="สถานีเชียงใหม่ (CNX)">สถานีเชียงใหม่ (CNX)</option>
+                  <option value="สถานีหาดใหญ่ (HDY)">สถานีหาดใหญ่ (HDY)</option>
+                  <option value="สถานีสุราษฎร์ธานี (URT)">สถานีสุราษฎร์ธานี (URT)</option>
+                  <option value="สถานีขอนแก่น (KKC)">สถานีขอนแก่น (KKC)</option>
+                  <option value="สถานีอุบลราชธานี (UBP)">สถานีอุบลราชธานี (UBP)</option>
+                  <option value="สถานีอุดรธานี (UTH)">สถานีอุดรธานี (UTH)</option>
+                  <option value="สถานีอู่ตะเภา (UTP)">สถานีอู่ตะเภา (UTP)</option>
+                  <option value="สถานีภูเก็ต (HKT)">สถานีภูเก็ต (HKT)</option>
+                  <option value="สถานีดอนเมือง (DMK)">สถานีดอนเมือง (DMK)</option>
+                  <option value="ชุมพร (CJM)">ชุมพร (CJM)</option>
+                  <option value="สถานีกระบี่ (KBV)">สถานีกระบี่ (KBV)</option>
+                </optgroup>
+              </select>
+              <span class="select-arrow">▼</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Signature -->
+        <section class="form-section signature-section">
+          <div class="section-header">
+            <span class="section-icon">✍️</span>
+            <h2>ลายเซ็นพนักงาน</h2>
+          </div>
+
+          <div class="signature-container">
+            <canvas id="signatureCanvas"></canvas>
+            <div class="signature-placeholder" id="signaturePlaceholder">
+              <span>แตะที่นี่เพื่อเซ็นชื่อ</span>
+            </div>
+          </div>
+          <div class="signature-warning" id="signatureWarning">กรุณาเซ็นชื่อเพื่อใช้เป็นหลักฐาน</div>
+          <button type="button" class="btn-clear" id="clearSignature">
+            <span class="btn-icon">🗑️</span>
+            ลบลายเซ็น
+          </button>
+        </section>
+
+        <!-- Section: Consent -->
+        <section class="form-section consent-section">
+          <div class="section-header">
+            <span class="section-icon">📋</span>
+            <h2>ข้อกำหนดและเงื่อนไข</h2>
+          </div>
+
+          <div class="consent-box">
+            <label class="consent-item">
+              <input type="checkbox" name="ack_read" id="ackRead" required>
+              <span class="checkbox-custom"></span>
+              <span class="consent-text">ข้าพเจ้าได้อ่านและรับทราบผลการประเมินเรียบร้อยแล้ว และยอมรับผลการประเมิน</span>
+            </label>
+
+            <label class="consent-item">
+              <input type="checkbox" name="ack_priv" id="ackPriv" required>
+              <span class="checkbox-custom"></span>
+              <span class="consent-text">ข้าพเจ้าทราบว่าข้อมูลผลการประเมิน เป็นข้อมูลส่วนบุคคลที่อยู่ภายใต้นโยบายความลับของบริษัท ซึ่งข้าพเจ้าจะไม่เปิดเผยข้อมูลนี้ให้แก่บุคคลอื่น</span>
+            </label>
+          </div>
+          <div class="consent-warning" id="consentWarning">กรุณากดยืนยันทั้ง 2 ตัวเลือก</div>
+        </section>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit" id="submitBtn" disabled>
+          <span class="btn-text">ส่งข้อมูล</span>
+          <span class="btn-loader"></span>
+        </button>
+
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2568 Pattaya Aviation | Read & Sign v7.2</p>
+    </footer>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <div class="modal-icon success">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="modal-title">บันทึกข้อมูลสำเร็จ</h3>
+      <p class="modal-detail" id="successDetail"></p>
+      <p class="modal-timer" id="successTimer"></p>
+      <button type="button" class="btn-modal" id="successOkBtn">ตกลง</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
