@@ -5,12 +5,12 @@
 
 /* CSS Variables */
 :root {
-  /* Colors */
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #818cf8;
-  --secondary: #8b5cf6;
-  --accent: #06b6d4;
+  /* Colors - Professional Corporate */
+  --primary: #1e40af;
+  --primary-dark: #1e3a8a;
+  --primary-light: #3b82f6;
+  --secondary: #1e3a8a;
+  --accent: #0369a1;
 
   --success: #10b981;
   --success-bg: #d1fae5;
@@ -119,12 +119,9 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 56px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  height: 60px;
+  background: var(--primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
 
@@ -156,11 +153,13 @@ body {
 }
 
 .header-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: var(--primary);
+  color: var(--gray-800);
   margin: 0;
   letter-spacing: 0.5px;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 3px solid var(--primary);
 }
 
 .logo-img {
@@ -207,9 +206,10 @@ body {
 .form-card {
   flex: 1;
   background: var(--white);
-  border-radius: var(--radius-2xl);
+  border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
-  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--gray-200);
+  box-shadow: none;
 }
 
 /* Form Sections */
@@ -232,7 +232,8 @@ body {
 }
 
 .section-icon {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
+  color: var(--primary);
 }
 
 .section-header h2 {
@@ -539,13 +540,13 @@ select:invalid {
   font-weight: 700;
   font-family: inherit;
   color: var(--white);
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: var(--primary);
   border: none;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-md);
   cursor: pointer;
   overflow: hidden;
   transition: all var(--transition-base);
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-submit:not(:disabled):hover {
